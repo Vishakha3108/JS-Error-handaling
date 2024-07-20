@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Write a function "manipulateString" that takes in a string and converts the charcters to uppercase letters. The function should return a callback function "logString" that logs the sentence "The manipulated string is:" along with the mamipulated string or the new string to console. -->
+
+    <script>
+        function manipulateString(inputString) {
+
+            const manipulatedString = inputString.toUpperCase();
+
+            function logString() {
+                console.log("The manipulated string is: " + manipulatedString);
+            }
+
+            return logString;
+        }
+
+        const myString = "Hello, World!";
+        const logFunction = manipulateString(myString);
+        logFunction(); 
+
+    </script>
+</body>
+
+</html>

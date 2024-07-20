@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Write a program that accepts a list of objects representing books [title, author, and year] and a callback function . The program should use the map function to create a new list containing only the titles of the books, and then pass this new list to the callback function. The callback function should then log the titles to the console in alphabetical order. -->
+
+    <script>
+        // Function that processes the list of books
+        function processBooks(books, callback) {
+            // Use the map function to create a new list of titles
+            const titles = books.map(book => book.title);
+
+            // Pass the new list of titles to the callback function
+            callback(titles);
+        }
+
+        // Callback function to log the titles in alphabetical order
+        function logTitlesAlphabetically(titles) {
+            // Sort the titles alphabetically
+            titles.sort();
+
+            // Log each title to the console
+            titles.forEach(title => console.log(title));
+        }
+
+        // Example usage:
+        const books = [
+            { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+            { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+            { title: "1984", author: "George Orwell", year: 1949 },
+            { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
+            { title: "Moby-Dick", author: "Herman Melville", year: 1851 }
+        ];
+
+        processBooks(books, logTitlesAlphabetically);
+
+
+    </script>
+</body>
+
+</html>

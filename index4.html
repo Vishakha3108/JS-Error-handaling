@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- You need to write a function that takes a name as input and returns a promise that resolves with a greeting message.
+    The function should greet the person using their name , with a message in the format "Hello, {name}!". -->
+
+    <script>
+        function greet(name) {
+            return new Promise((resolve, reject) => {
+                if (name) {
+    
+                    resolve(`Hello, ${name}!`);
+                } else {
+        
+                    reject("Name is required to generate a greeting.");
+                }
+            });
+        }
+        
+        greet("Alice")
+            .then(greeting => {
+                console.log(greeting); 
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        greet("")
+            .then(greeting => {
+                console.log(greeting);
+            })
+            .catch(error => {
+                console.error(error); 
+            });
+
+    </script>
+</body>
+
+</html>

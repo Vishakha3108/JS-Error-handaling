@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Write  a function that takes in an array of integers and a callback function , and returns a new array  where each element is doubled the callback. -->
+    <script>
+        function doubleArrayWithCallback(arr, callback) {
+            return arr.map(element => callback(element * 2));
+        }
+        const arr = [1, 2, 3, 4, 5];
+        const callback = num => num;
+
+        const doubledArr = doubleArrayWithCallback(arr, callback);
+        console.log(doubledArr);
+
+    </script>
+</body>
+
+</html>
